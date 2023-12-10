@@ -20,6 +20,7 @@ module.exports.verifEmail = async (req, res) => {
         res.send(false);
     }
 };
+
 module.exports.signIn = async (req, res) => {
     const { email, password, socket } = req.body;
     try {
@@ -30,6 +31,7 @@ module.exports.signIn = async (req, res) => {
         res.send(false);
     }
 };
+
 module.exports.user = async (req, res) => {
     const { id, socket } = req.body;
     try {

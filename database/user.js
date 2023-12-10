@@ -4,7 +4,8 @@ const friendModel = require("../model/friend.js");
 module.exports.disconnected = async (socket) => {
     try {
         const upadte = await userModel.findOneAndUpdate({socket}, { $set: { connected: false } })
-        return upadte._id
+        if (upadte)return upadte._id
+        return undefined
     } catch (err) {
         console.log(err);
     }
