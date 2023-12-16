@@ -24,7 +24,7 @@ mongoose
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
-    .then(() => console.log("Connected"));
+    .then(() => console.log("Connected to MONGO DB"));
 
 app.use(
     cors({
